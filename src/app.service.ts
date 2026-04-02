@@ -2,26 +2,31 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'welcomesecure notes api';
+  getHelloMessage() {
+    return 'Hello Mudipa';
   }
 
+  getTestMessage() {
+    return 'This is test route';
+  }
 
-getTestMessage(){
-  return 'hello mudipqa'
-}
+  getProfile() {
+    return {
+      name: 'Mudipa',
+      role: 'Backend Learner',
+      level: 'Beginner',
+    };
+  }
 
+  getAbout() {
+    return {
+      project: 'Secure Notes API',
+      version: '1.0.0',
+      status: 'Learning backend step by step',
+    };
+  }
 
-getNotes()
-{
-  return[{
-    id:1,
-    title:'learn nest js',
-    content:"we are doing" }
-  ]
-}
-
-
-
-
+  getSkills() {
+    return ['NestJS', 'Routing', 'Controllers', 'Services'];
+  }
 }
